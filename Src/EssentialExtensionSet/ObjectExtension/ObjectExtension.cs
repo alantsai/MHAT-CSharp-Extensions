@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using EssentialExtensionSet.ReflectionExtension;
 
 namespace EssentialExtensionSet.ObjectExtension
 {
@@ -20,6 +21,26 @@ namespace EssentialExtensionSet.ObjectExtension
         public static string ToStringNullGuard(this object value)
         {
             return (value ?? string.Empty).ToString();
+        }
+
+        /// <summary>
+        /// Get Object proeprty value by property name
+        /// </summary>
+        /// <typeparam name="T">The expected return type</typeparam>
+        /// <param name="obj">The object</param>
+        /// <param name="name">The Property name</param>
+        /// <returns>if is null, return default(t), else return value in T</returns>
+        public static T GetPropertyValue<T>(this Object obj, String name)
+        {
+            Object retval = obj.GetPropertyValue(name);
+
+            if (retval == null) 
+            { 
+                return default(T); 
+            }
+
+            // throws InvalidCastException if types are incompatible
+            return (T)retval;
         }
     }
 }
