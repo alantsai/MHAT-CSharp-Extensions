@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnumExtension\EnumExtension.cs" />
     <Compile Include="ObjectExtension\ObjectExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectionExtension\ReflectionExtension.cs">
