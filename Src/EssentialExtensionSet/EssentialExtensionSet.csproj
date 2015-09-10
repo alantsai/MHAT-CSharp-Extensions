@@ -53,6 +53,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ReflectionExtension\ViewModel\ComparePropertyResult.cs" />
+    <Compile Include="StringExtension\StringExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
