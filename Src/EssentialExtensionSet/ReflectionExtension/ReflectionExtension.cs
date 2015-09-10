@@ -86,6 +86,8 @@ namespace EssentialExtensionSet.ReflectionExtension
 
         /// <summary>
         /// Compares the public primitive type properties.
+        /// This only compare the properties of T. No include all properties of the pass in object.
+        /// If T is interface and self object has more properties then T, those will not be compared
         /// </summary>
         /// <typeparam name="T">Type of pass in object</typeparam>
         /// <param name="self">Source compare object</param>
@@ -93,7 +95,7 @@ namespace EssentialExtensionSet.ReflectionExtension
         /// <param name="ignorePropertiesName">Name of properies to ignore.</param>
         /// <returns>Different primitive type properties name and compare value object</returns>
         public static IEnumerable<ComparePropertyResult> 
-            ComparePublicPrimitiveTypeProperties<T>(this T self, T to, 
+            ComparePublicPrimitivePropertiesTypeOfPassinType<T>(this T self, T to, 
             IEnumerable<string> ignorePropertiesName = null)
         {
             List<ComparePropertyResult> variances = 
