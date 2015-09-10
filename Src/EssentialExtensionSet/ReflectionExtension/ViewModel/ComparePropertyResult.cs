@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace EssentialExtensionSet.ReflectionExtension.ViewModel
 {
     /// <summary>
     /// Holds the result of compare property
+    /// PropertyType is ignored from ToJsonString
     /// </summary>
     public class ComparePropertyResult
     {
@@ -37,10 +39,12 @@ namespace EssentialExtensionSet.ReflectionExtension.ViewModel
 
         /// <summary>
         /// Gets or sets the type of the property.
+        /// This property is ignored fron ToJsonString() method
         /// </summary>
         /// <value>
         /// The type of the property.
         /// </value>
+        [JsonIgnore]
         public Type PropertyType { get; set; }
     }
 }
