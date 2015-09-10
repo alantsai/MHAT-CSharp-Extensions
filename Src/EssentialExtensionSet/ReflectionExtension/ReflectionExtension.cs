@@ -26,18 +26,18 @@ namespace EssentialExtensionSet.ReflectionExtension
         {
             foreach (String part in name.Split('.'))
             {
-                if (obj == null) 
-                { 
-                    return null; 
+                if (obj == null)
+                {
+                    return null;
                 }
 
                 Type type = obj.GetType();
 
                 PropertyInfo info = type.GetProperty(part);
 
-                if (info == null) 
-                { 
-                    return null; 
+                if (info == null)
+                {
+                    return null;
                 }
 
                 obj = info.GetValue(obj, null);
@@ -94,11 +94,93 @@ namespace EssentialExtensionSet.ReflectionExtension
         /// <param name="to">Compare to object</param>
         /// <param name="ignorePropertiesName">Name of properies to ignore.</param>
         /// <returns>Different primitive type properties name and compare value object</returns>
-        public static IEnumerable<ComparePropertyResult> 
-            ComparePublicPrimitivePropertiesTypeOfPassinType<T>(this T self, T to, 
+        public static IEnumerable<ComparePropertyResult>
+            ComparePublicPrimitivePropertiesTypeOfPassinType<T>(this T self, T to,
             IEnumerable<string> ignorePropertiesName = null)
         {
-            List<ComparePropertyResult> variances = 
+            Type type = typeof(T);
+
+            IEnumerable<ComparePropertyResult> variances =
+                   CompareProperties<T>(self, to, type, ignorePropertiesName);
+
+            return variances.Where(x => x.PropertyType.IsTypePrimitive());
+        }
+
+        /// <summary>
+        /// Compares the public primitive type properties.
+        /// This will include all properties of self object, not just compare T properties.
+        /// </summary>
+        /// <typeparam name="T">Type of pass in object</typeparam>
+        /// <param name="self">Source compare object</param>
+        /// <param name="to">Compare to object</param>
+        /// <param name="ignorePropertiesName">Name of properies to ignore.</param>
+        /// <returns>Different primitive type properties name and compare value object</returns>
+        public static IEnumerable<ComparePropertyResult>
+            ComparePublicPrimitivePropertiesTypeOfObject<T>(this T self, T to,
+            IEnumerable<string> ignorePropertiesName = null)
+        {
+            IEnumerable<ComparePropertyResult> variances = new List<ComparePropertyResult>();
+
+            if (self != null)
+            {
+                Type type = self.GetType();
+
+                variances =
+                   CompareProperties<T>(self, to, type, ignorePropertiesName);
+            }
+
+            return variances.Where(x => x.PropertyType.IsTypePrimitive());
+        }
+
+        /// <summary>
+        /// Determines whether type is prmitive
+        /// This does not check generic and lists
+        /// </summary>
+        /// <param name="type">The type.</param>
+        /// <returns>Treu for being a primitive type</returns>
+        public static bool IsTypePrimitive(this Type type)
+        {
+            return
+                    type.IsPrimitive
+                     || new Type[]
+                        {
+                              typeof(Enum),
+                              typeof(String),
+                              typeof(Char),
+                              typeof(Guid),
+                              typeof(Boolean),
+                              typeof(Byte),
+                              typeof(Int16),
+                              typeof(Int32),
+                              typeof(Int64),
+                              typeof(Single),
+                              typeof(Double),
+                              typeof(Decimal),
+                              typeof(SByte),
+                              typeof(UInt16),
+                              typeof(UInt32),
+                              typeof(UInt64),
+                              typeof(DateTime),
+                              typeof(DateTimeOffset),
+                              typeof(TimeSpan),
+                        }.Contains(type);
+        }
+
+        /// <summary>
+        /// Compares the properties.
+        /// </summary>
+        /// <typeparam name="T">Type of pass in object</typeparam>
+        /// <param name="self">Source compare object</param>
+        /// <param name="to">Compare to object</param>
+        /// <param name="type">The type.</param>
+        /// <param name="ignorePropertiesName">Name of properies to ignore.</param>
+        /// <returns>
+        /// Different primitive type properties name and compare value object
+        /// </returns>
+        private static IEnumerable<ComparePropertyResult> CompareProperties<T>
+            (T self, T to, Type type, IEnumerable<string> ignorePropertiesName = null)
+        {
+            List<ComparePropertyResult> variances =
                 new List<ComparePropertyResult>();
 
             if (ignorePropertiesName == null)
@@ -108,10 +190,7 @@ namespace EssentialExtensionSet.ReflectionExtension
 
             if (self != null && to != null)
             {
-                Type type = typeof(T);
-
-                foreach (PropertyInfo pi in type
-                            .GetProperties(BindingFlags.Public | BindingFlags.Instance))
+                foreach (PropertyInfo pi in type.GetProperties(BindingFlags.Public | BindingFlags.Instance))
                 {
                     if (!ignorePropertiesName.Contains(pi.Name))
                     {
@@ -136,41 +215,7 @@ namespace EssentialExtensionSet.ReflectionExtension
                 }
             }
 
-            return variances.Where(x => x.PropertyType.IsTypePrimitive());
-        }
-
-        /// <summary>
-        /// Determines whether type is prmitive
-        /// This does not check generic and lists
-        /// </summary>
-        /// <param name="type">The type.</param>
-        /// <returns>Treu for being a primitive type</returns>
-        public static bool IsTypePrimitive(this Type type)
-        {
-            return
-                    type.IsPrimitive 
-                     || new Type[] 
-                        {
-                              typeof(Enum),
-                              typeof(String),
-                              typeof(Char),
-                              typeof(Guid),
-                              typeof(Boolean),
-                              typeof(Byte),
-                              typeof(Int16),
-                              typeof(Int32),
-                              typeof(Int64),
-                              typeof(Single),
-                              typeof(Double),
-                              typeof(Decimal),
-                              typeof(SByte),
-                              typeof(UInt16),
-                              typeof(UInt32),
-                              typeof(UInt64),
-                              typeof(DateTime),
-                              typeof(DateTimeOffset),
-                              typeof(TimeSpan),
-                        }.Contains(type);
+            return variances;
         }
     }
 }
