@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using MHAT.CSharp.Extensions.ReflectionExtension;
+using MHAT.CSharp.Extensions.ReflectionExtensions;
 using Newtonsoft.Json;
 
-namespace MHAT.CSharp.Extensions.ObjectExtension
+namespace MHAT.CSharp.Extensions.ObjectExtensions
 {
     /// <summary>
     /// Extension methods for object

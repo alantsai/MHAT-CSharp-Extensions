@@ -46,15 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnumExtension\EnumExtension.cs" />
-    <Compile Include="IEnumerableExtension\IEnumerableExtension.cs" />
-    <Compile Include="ObjectExtension\ObjectExtension.cs" />
+    <Compile Include="EnumExtensions\EnumExtension.cs" />
+    <Compile Include="IEnumerableExtensions\IEnumerableExtension.cs" />
+    <Compile Include="ObjectExtensions\ObjectExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReflectionExtension\ReflectionExtension.cs">
+    <Compile Include="ReflectionExtensions\ReflectionExtension.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ReflectionExtension\ViewModel\ComparePropertyResult.cs" />
-    <Compile Include="StringExtension\StringExtension.cs" />
+    <Compile Include="ReflectionExtensions\ViewModel\ComparePropertyResult.cs" />
+    <Compile Include="StringExtensions\StringExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

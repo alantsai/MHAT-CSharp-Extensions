@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MHAT.CSharp.Extensions.IEnumerableExtension
+namespace MHAT.CSharp.Extensions.IEnumerableExtensions
 {
     /// <summary>
     /// IEnumerable Extensions

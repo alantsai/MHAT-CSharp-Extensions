@@ -4,11 +4,10 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
-
 using System.Text;
-using MHAT.CSharp.Extensions.ReflectionExtension.ViewModel;
+using MHAT.CSharp.Extensions.ReflectionExtensions.ViewModel;
 
-namespace MHAT.CSharp.Extensions.ReflectionExtension
+namespace MHAT.CSharp.Extensions.ReflectionExtensions
 {
     /// <summary>
     /// Reflection related extension

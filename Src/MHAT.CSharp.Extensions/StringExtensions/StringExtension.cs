@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MHAT.CSharp.Extensions.StringExtension
+namespace MHAT.CSharp.Extensions.StringExtensions
 {
     /// <summary>
     /// String Extensions
