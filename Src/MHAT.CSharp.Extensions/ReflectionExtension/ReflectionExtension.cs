@@ -6,9 +6,9 @@ using System.Linq;
 using System.Reflection;
 
 using System.Text;
-using EssentialExtensionSet.ReflectionExtension.ViewModel;
+using MHAT.CSharp.Extensions.ReflectionExtension.ViewModel;
 
-namespace EssentialExtensionSet.ReflectionExtension
+namespace MHAT.CSharp.Extensions.ReflectionExtension
 {
     /// <summary>
     /// Reflection related extension

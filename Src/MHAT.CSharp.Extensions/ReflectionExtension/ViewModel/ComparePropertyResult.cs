@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace EssentialExtensionSet.ReflectionExtension.ViewModel
+namespace MHAT.CSharp.Extensions.ReflectionExtension.ViewModel
 {
     /// <summary>
     /// Holds the result of compare property

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using EssentialExtensionSet.ReflectionExtension;
+using MHAT.CSharp.Extensions.ReflectionExtension;
 
-namespace EssentialExtensionSet.EnumExtension
+namespace MHAT.CSharp.Extensions.EnumExtension
 {
     /// <summary>
     /// Enum Extension
