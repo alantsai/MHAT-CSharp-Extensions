@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using EssentialExtensionSet.ReflectionExtension;
+using Newtonsoft.Json;
 
 namespace EssentialExtensionSet.ObjectExtension
 {
@@ -41,6 +42,17 @@ namespace EssentialExtensionSet.ObjectExtension
 
             // throws InvalidCastException if types are incompatible
             return (T)retval;
+        }
+
+        /// <summary>
+        /// To the json string.
+        /// </summary>
+        /// <typeparam name="T">Type of object</typeparam>
+        /// <param name="obj">The object to json</param>
+        /// <returns>Json string of the object</returns>
+        public static string ToJsonString<T>(this T obj)
+        {
+            return JsonConvert.SerializeObject(obj);
         }
     }
 }
