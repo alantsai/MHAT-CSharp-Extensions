@@ -48,6 +48,7 @@
     <Compile Include="ReflectionExtension\ReflectionExtension.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ReflectionExtension\ViewModel\ComparePropertyResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
