@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EssentialExtensionSet", "EssentialExtensionSet\EssentialExtensionSet.csproj", "{DC7B62F6-8666-4394-80DE-A1FFB0A4B6D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHAT.CSharp.Extensions", "MHAT.CSharp.Extensions\MHAT.CSharp.Extensions.csproj", "{DC7B62F6-8666-4394-80DE-A1FFB0A4B6D6}"
 EndProject
 Global
 	GlobalSection(CodealikeProperties) = postSolution

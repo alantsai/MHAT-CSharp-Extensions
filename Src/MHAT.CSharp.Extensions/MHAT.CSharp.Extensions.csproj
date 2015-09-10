@@ -7,8 +7,8 @@
     <ProjectGuid>{DC7B62F6-8666-4394-80DE-A1FFB0A4B6D6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EssentialExtensionSet</RootNamespace>
-    <AssemblyName>EssentialExtensionSet</AssemblyName>
+    <RootNamespace>MHAT.CSharp.Extensions</RootNamespace>
+    <AssemblyName>MHAT.CSharp.Extensions</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>a769b5c9</NuGetPackageImportStamp>

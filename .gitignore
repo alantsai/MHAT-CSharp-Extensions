@@ -216,4 +216,4 @@ FakesAssemblies/
 **/*.Server/ModelManifest.xml
 _Pvt_Extensions
 
-/Src/EssentialExtensionSet.sln.GhostDoc.xml
+/Src/MHAT.CSharp.Extensions.sln.GhostDoc.xml
