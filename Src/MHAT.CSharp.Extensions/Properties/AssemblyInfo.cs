@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Essential Extension Set")]
-[assembly: AssemblyDescription("Provides essential function via C# extension methods")]
+[assembly: AssemblyTitle("C# Extension Methods")]
+[assembly: AssemblyDescription("A set of often used C# extension methods")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Alan Tsai")]
-[assembly: AssemblyProduct("Essential Extension Set")]
+[assembly: AssemblyProduct("C# Extension Methods")]
 [assembly: AssemblyCopyright("Copyright © Alan Tsai 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -34,3 +34,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("0.1.0.0")]
 [assembly: AssemblyFileVersion("0.1.0.0")]
+[assembly: AssemblyInformationalVersion("0.1.0-alpha")]
