@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/alantsai/MHAT-CSharp-Extensions</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>include missing document xml</releaseNotes>
+    <releaseNotes>fix cpu problem</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>C# csharp extension extensionMethod</tags>
   </metadata>
