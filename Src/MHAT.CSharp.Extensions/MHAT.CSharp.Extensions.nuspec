@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/alantsai/MHAT-CSharp-Extensions</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>fix cpu problem</releaseNotes>
+    <releaseNotes>Update dependent NewtonSoft.Json.Net package to v7</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>C# csharp extension extensionMethod</tags>
   </metadata>
