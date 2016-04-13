@@ -10,7 +10,12 @@
     <projectUrl>https://github.com/alantsai/MHAT-CSharp-Extensions</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Downgrade dependent on Newtonsoft.Json to v6</releaseNotes>
+    <releaseNotes>
+      - Downgrade dependent on Newtonsoft.Json to v6
+      
+      - Same as version 0.1.4-alpha - however, 0.1.4-alpha seems to stll include
+      version 7 of the Newtonsoft.Json
+    </releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>C# csharp extension extensionMethod</tags>
   </metadata>
